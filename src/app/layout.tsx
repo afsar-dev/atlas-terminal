@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import { Yusei_Magic } from "next/font/google";
 import "./globals.css";
-import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
+import { Navbar } from "@/components/layout/Navbar";
 
 const yusei = Yusei_Magic({
   variable: "--yusei-magic",
@@ -24,7 +24,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${yusei.className} antialiased`}>
+      <body className={`${yusei.className} antialiased relative`}>
         <Navbar />
         {children}
         <Footer />
